@@ -128,6 +128,12 @@ img {
     .weather-data p {
         font-size: 16px; /* Riduce la dimensione del font per i paragrafi */
     }
+    img {
+        max-width: 100%; /* L'immagine non supererà la larghezza del suo contenitore */
+        max-height: 150px; /* Limita l'altezza massima per evitare che diventi troppo alta */
+        display: block; /* Rimuove gli spazi sotto l'immagine */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente se necessario */
+    }
 }
 
 /* Per schermi medi, come i tablet */
