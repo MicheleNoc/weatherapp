@@ -1,0 +1,150 @@
+/* Global Styles */
+html, body {
+    height: 100%; /* Assicura che l'html e il body occupino l'intera altezza della finestra */
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente dal blu chiaro al blu scuro */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa display flex per centrare il contenuto del body */
+    flex-direction: column; /* Dispone gli elementi in una colonna */
+    justify-content: center; /* Centra orizzontalmente il contenuto del body */
+    align-items: center; /* Centra verticalmente il contenuto del body */
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il contenuto del footer */
+    align-items: center; /* Centra verticalmente il contenuto del footer */
+    position: fixed; /* Usa fixed per mantenere il footer fisso */
+    bottom: 0;
+    left: 0; /* Assicura che il footer parta dal lato sinistro */
+    width: 100%; /* Assicura che il footer occupi tutta la larghezza della finestra */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px; /* Font size per il footer */
+}
+
+/* Container Styles */
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 60px; /* Spazio sopra il container per non sovrapporsi al footer */
+    box-sizing: border-box;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Dispone gli elementi in colonna sui dispositivi mobili */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 300px; /* Limita la larghezza massima dell'input sui dispositivi mobili */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Bordi arrotondati solo a sinistra */
+    font-size: 16px;
+    outline: none; /* Rimuove l'outline blu di default */
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; /* Spazio tra l'input e il pulsante */
+}
+
+.form-control:focus {
+    border-color: #28a745; /* Cambia il colore del bordo quando l'input è attivo */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Bordi arrotondati solo a destra */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Pulsante occupa tutta la larghezza disponibile */
+    max-width: 300px; /* Limita la larghezza massima del pulsante sui dispositivi mobili */
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Weather Data Styles */
+.weather-data {
+    margin-top: 20px;
+}
+
+.weather-data h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.weather-data p {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+img {
+    max-width: 100%; /* L'immagine non supererà la larghezza del suo contenitore */
+    max-height: 200px; /* Limita l'altezza massima per evitare che diventi troppo alta */
+    display: block; /* Rimuove gli spazi sotto l'immagine */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente se necessario */
+}
+
+/* Media Queries */
+
+/* Per schermi piccoli, come i telefoni cellulari */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 20px; /* Riduce lo spazio sopra il container sui dispositivi mobili */
+        padding: 15px; /* Riduce il padding del container sui dispositivi mobili */
+    }
+
+    .form-control, .btn {
+        width: 100%; /* Gli elementi del modulo occupano tutta la larghezza disponibile */
+    }
+
+    .weather-data h3 {
+        font-size: 20px; /* Riduce la dimensione del font per gli header */
+    }
+
+    .weather-data p {
+        font-size: 16px; /* Riduce la dimensione del font per i paragrafi */
+    }
+}
+
+/* Per schermi medi, come i tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 15px; /* Riduce il padding del container sui tablet */
+    }
+
+    .form-control, .btn {
+        max-width: 100%; /* Assicura che il modulo si adatti alla larghezza del tablet */
+    }
+
+    .weather-data h3 {
+        font-size: 22px; /* Riduce leggermente la dimensione del font per gli header sui tablet */
+    }
+
+    .weather-data p {
+        font-size: 17px; /* Riduce leggermente la dimensione del font per i paragrafi sui tablet */
+    }
+}

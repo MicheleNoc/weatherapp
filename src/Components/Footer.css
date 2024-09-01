@@ -1,0 +1,9 @@
+/* Footer.css */
+footer {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    bottom: 0;        /* altezza del footer */
+  }
